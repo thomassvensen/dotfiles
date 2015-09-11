@@ -1,1 +1,60 @@
-../Dropbox/config/_vsvimrc
+" Share via Dropbox:
+" mklink _vsvimrc \Dropbox\config\_vsvimrc
+
+" Expand tabs to spaces
+set expandtab
+
+" Tab size 4
+set softtabstop=4
+
+" Move in/out in steps of 4
+set shiftwidth=4
+
+" No need to "reselect" old visual area after indenting
+:vnoremap < <gv
+:vnoremap > >gv
+
+" Incremental searching
+set incsearch
+
+" Search case sensitively only when I enter UPPER CASE letters
+set ignorecase smartcase
+
+
+set backspace=indent,eol,start
+
+
+" VsVim settings for Visual Studio
+nnoremap gi :vsc Resharper.Resharper_GotoImplementation<CR>
+nnoremap ge :vsc Resharper.Resharper_GotoNextErrorInSolution<CR>
+nnoremap gh :vsc Resharper.Resharper_GotoNextHighlight<CR>
+nnoremap gm :vsc Resharper.Resharper_GotoFileMember<CR>
+nnoremap go :vsc Diff.SwitchBetweenLeftAndRight<CR>
+nnoremap gl :vsc Tools.CodeLineage<CR>
+nnoremap gx :vsc Tools.ResXManager<CR>
+nnoremap gb :vsc Tools.AttachtoIIS<CR>
+nnoremap gc :vsc Resharper_TestCop_JumpToTest<CR>
+nnoremap gu :vsc Resharper.Resharper_UnitTest_RunSolution<CR>
+nnoremap gr :vsc Resharper.Resharper_Resharper_UnitTest_RunContext<CR>
+nnoremap g2 :vsc Resharper.Resharper_Resharper_UnitTest_DebugContext<CR>
+nnoremap gU :vsc Resharper.Resharper_ShowUnitTestSessions<CR><C-F4>
+nnoremap gG :vsc Resharper.Resharper_GenerateFormattingMembers<CR><C-F4>
+nnoremap <C-f> :vsc Resharper_GotoWordIndex<CR>
+nmap q :wq<CR>
+nnoremap Q :vsc File.CloseSolution<CR>
+" nnoremap qq :vsc Window.CloseAllDocuments<CR>
+nnoremap qq :vsc File.CloseAllButThis<CR>
+nnoremap <C-O> :vsc View.NavigateBackward<CR>
+nnoremap <C-I> :vsc View.NavigateForward<CR>
+nnoremap gV :vsc Window.NewVerticalTabGroup<CR>
+nnoremap gj gT
+nnoremap gk gt
+nnoremap q :vsc Window.CloseDocumentWindow<CR>
+
+"Unsettable via VsVim
+" Shift+Alt+D - Dock the current window
+" Shift+Alt+H - Hide (auto) the current window
+
+" Off by default when using VsVim
+set number
+
