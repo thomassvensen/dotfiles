@@ -1,0 +1,6 @@
+map q removeTab
+map <c-o> goBack
+map <c-i> goForward
+map gj previousTab
+map gk nextTab
+
