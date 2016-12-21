@@ -1,4 +1,5 @@
-set background=dark
+set relativenumber
+:au FocusLost * silent! wa
 
 " Vundle setup starts here
 filetype off                  " required
@@ -7,27 +8,30 @@ filetype off                  " required
 set rtp+=~/vimfiles/bundle/Vundle.vim
 let path='~/vimfiles/bundle'
 "call vundle#begin(path)
-
-" let Vundle manage Vundle, required
+"
+"" let Vundle manage Vundle, required
 "Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
+"
+"" The following are examples of different formats supported.
+"" Keep Plugin commands between vundle#begin/end.
+"" plugin on GitHub repo
 "Plugin 'tpope/vim-fugitive'
-
+"
 "Plugin 'bling/vim-airline'
-
+"
 "Plugin 'godlygeek/tabular'
 "Plugin 'plasticboy/vim-markdown'
-
-
-" All of your Plugins must be added before the following line
+"
+"
+"" All of your Plugins must be added before the following line
 "call vundle#end()            " required
 "filetype plugin indent on    " required
+"
+"" Vundle setup end
 
-" Vundle setup end
 
+" Start maximized
+au GUIEnter * simalt ~x
 
 " Autosave when switching to other window
 "autocmd FocusLost * :wall
@@ -226,14 +230,15 @@ set splitbelow
 "au BufRead,BufNewFile query_log.* set filetype=querylog
 au! Syntax querylog source $VIM/vimfiles/syntax/querylog.vim
 
-" Fix problem when opening files fra xplorer2
-nmap <S-F1> 3:bd<CR>
-
 " Make searching by start of line easier
 nmap <C-space> /^
 
 " Make it swift to support ConfluenceWiki
 nmap gw :set filetype=confluencewiki linebreak<CR>
+
+" For some reason need to override these
+set shell=cmd
+set shellcmdflag=/c
 
 " Easier to switch between buffers
 nmap B :buffer 
@@ -244,9 +249,6 @@ set nobomb
 " Show line numbers
 set number
 
-" Type the not-so-secret password for korpset
-cmap <C-b> e ftp://bsmkorps.no@ftp.bsmkorps.no/
-cmap <C-g> 4x7t#!
-
-nmap å <C-]>
-
+" Make it easy to type curly braces indepently of keyboard layout
+imap ((( {
+imap ))) }
