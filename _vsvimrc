@@ -25,24 +25,26 @@ set backspace=indent,eol,start
 
 
 " VsVim settings for Visual Studio
-nnoremap gi :vsc Resharper.Resharper_GotoImplementation<CR>
+nnoremap gi :vsc Edit.GoToImplementation<CR>
+nnoremap gi :vsc Edit.GoToImplementation<CR>
 nnoremap ge :vsc Resharper.Resharper_GotoNextErrorInSolution<CR>
 nnoremap gh :vsc Resharper.Resharper_GotoNextHighlight<CR>
 nnoremap gm :vsc Resharper.Resharper_GotoFileMember<CR>
+nnoremap gn :vsc Resharper.Resharper_GotoFileMember<CR>
+nnoremap ga :vsc Resharper.Resharper_FindUsages<CR>
 nnoremap go :vsc Diff.SwitchBetweenLeftAndRight<CR>
 nnoremap gl :vsc Tools.CodeLineage<CR>
 nnoremap gx :vsc Tools.ResXManager<CR>
 nnoremap gb :vsc Tools.AttachtoIIS<CR>
-nnoremap gc :vsc Resharper_TestCop_JumpToTest<CR>
-nnoremap gu :vsc Resharper.Resharper_UnitTest_RunSolution<CR>
-nnoremap gr :vsc Resharper.Resharper_Resharper_UnitTest_RunContext<CR>
-nnoremap g2 :vsc Resharper.Resharper_Resharper_UnitTest_DebugContext<CR>
-nnoremap gU :vsc Resharper.Resharper_ShowUnitTestSessions<CR><C-F4>
-nnoremap gG :vsc Resharper.Resharper_GenerateFormattingMembers<CR><C-F4>
-nnoremap <C-f> :vsc Resharper_GotoWordIndex<CR>
+nnoremap gR :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
+nnoremap gu :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
+nnoremap gr :vsc ReSharper.ReSharper_UnitTestRunFromContext<CR>
+nnoremap g2 :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
+nnoremap gU :vsc ReSharper.ReSharper_ShowUnitTestSessions<CR><C-F4>
+nnoremap gG :vsc ReSharper.ReSharper_GenerateFormattingMembers<CR><C-F4>
+nnoremap <C-f> :vsc ReSharper.ReSharper_GotoText<CR>
 nmap q :wq<CR>
 nnoremap Q :vsc File.CloseSolution<CR>
-" nnoremap qq :vsc Window.CloseAllDocuments<CR>
 nnoremap qq :vsc File.CloseAllButThis<CR>
 nnoremap <C-O> :vsc View.NavigateBackward<CR>
 nnoremap <C-I> :vsc View.NavigateForward<CR>
@@ -57,4 +59,8 @@ nnoremap q :vsc Window.CloseDocumentWindow<CR>
 
 " Off by default when using VsVim
 set number
+
+" Convenient fallback when switching between Mac and Windows keyboard layouts
+imap ((( {
+imap ))) }
 
