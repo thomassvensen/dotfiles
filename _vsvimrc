@@ -25,8 +25,10 @@ set backspace=indent,eol,start
 
 
 " VsVim settings for Visual Studio
+nnoremap gb :vsc Team.Git.Annotate<CR>
 nnoremap gi :vsc Edit.GoToImplementation<CR>
-nnoremap gi :vsc Edit.GoToImplementation<CR>
+nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+nnoremap gf :vsc Resharper.Resharper_ReformatCode<CR>
 nnoremap ge :vsc Resharper.Resharper_GotoNextErrorInSolution<CR>
 nnoremap gh :vsc Resharper.Resharper_GotoNextHighlight<CR>
 nnoremap gm :vsc Resharper.Resharper_GotoFileMember<CR>
@@ -35,23 +37,29 @@ nnoremap ga :vsc Resharper.Resharper_FindUsages<CR>
 nnoremap go :vsc Diff.SwitchBetweenLeftAndRight<CR>
 nnoremap gl :vsc Tools.CodeLineage<CR>
 nnoremap gx :vsc Tools.ResXManager<CR>
-nnoremap gb :vsc Tools.AttachtoIIS<CR>
 nnoremap gR :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
 nnoremap gu :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
 nnoremap gr :vsc ReSharper.ReSharper_UnitTestRunFromContext<CR>
 nnoremap g2 :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
 nnoremap gU :vsc ReSharper.ReSharper_ShowUnitTestSessions<CR><C-F4>
+vnoremap gs :vsc ReSharper.ReSharper_SurroundWith<CR>
 nnoremap gG :vsc ReSharper.ReSharper_GenerateFormattingMembers<CR><C-F4>
 nnoremap <C-f> :vsc ReSharper.ReSharper_GotoText<CR>
-nmap q :wq<CR>
+inoremap <C-f> <ESC>:vsc ReSharper.ReSharper_GotoText<CR>
+vnoremap <C-f> :vsc ReSharper.ReSharper_GotoText<CR>
+nmap # :wq<CR>
 nnoremap Q :vsc File.CloseSolution<CR>
 nnoremap qq :vsc File.CloseAllButThis<CR>
 nnoremap <C-O> :vsc View.NavigateBackward<CR>
 nnoremap <C-I> :vsc View.NavigateForward<CR>
 nnoremap gV :vsc Window.NewVerticalTabGroup<CR>
-nnoremap gj gT
-nnoremap gk gt
+nnoremap gj :vsc Window.PreviousTab<CR>
+nnoremap gk :vsc Window.NextTab<CR>
+nnoremap gP vi"
 nnoremap q :vsc Window.CloseDocumentWindow<CR>
+
+" Attempt at creating shortcut for wrapping a code block with if () {}
+vnoremap gS dOif () {<CR>}<ESC>PjV%jok><ESC>
 
 "Unsettable via VsVim
 " Shift+Alt+D - Dock the current window
@@ -60,7 +68,4 @@ nnoremap q :vsc Window.CloseDocumentWindow<CR>
 " Off by default when using VsVim
 set number
 
-" Convenient fallback when switching between Mac and Windows keyboard layouts
-imap ((( {
-imap ))) }
 
