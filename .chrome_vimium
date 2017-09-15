@@ -1,6 +1,9 @@
-map q removeTab
+map # removeTab
+map e removeTab
 map <c-o> goBack
 map <c-i> goForward
 map gj previousTab
 map gk nextTab
-
+map u restoreTab
+map n createTab https://git.canaldigital.com/projects/WEB/repos/web-customer-nordic/browse
+map . passNextKey normal
