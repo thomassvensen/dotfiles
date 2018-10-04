@@ -1,4 +1,11 @@
 {
+    // "javascript.implicitProjectConfig.checkJs": true,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true
+    },
     "terminal.integrated.fontSize": 12,
     "files.autoSave": "off",
     "editor.lineNumbers": "relative",
@@ -35,10 +42,6 @@
         "javascript",
         "html"
     ],
-    "editor.formatOnSave": true,
-    // "editor.codeActionsOnSave": {
-    //     "source.organizeImports": true
-    // },
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "cSpell.userWords": [
@@ -51,6 +54,7 @@
         "CONTENTAZUREFILECONNECTIONSTRING",
         "CONTENTSHARE",
         "Dropdown",
+        "Fenix",
         "GUID",
         "INSTRUMENTATIONKEY",
         "Kogen",
@@ -69,6 +73,7 @@
         "Unmount",
         "Validators",
         "Waypoint",
+        "Xunit",
         "accountinfo",
         "appsettings",
         "autohide",
@@ -77,9 +82,12 @@
         "besöksaddress",
         "boxaddress",
         "boxadress",
+        "creditrating",
         "customernumber",
         "customerteamcert",
+        "deleter",
         "devtools",
+        "etag",
         "eventid",
         "featureflag",
         "frontpage",
@@ -98,6 +106,7 @@
         "openid",
         "paymentchannel",
         "paymentchannels",
+        "polyfill",
         "postaddress",
         "reselect",
         "resourcegroup",
@@ -108,6 +117,7 @@
         "stargate",
         "stest",
         "sökresultat",
+        "toxy",
         "typeahead",
         "upsert",
         "waypointcustomer",
@@ -219,6 +229,45 @@
                 }
             ]
         },
+        {
+            "before": [
+                "g",
+                "m"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.gotoSymbol",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.goToTypeDefinition",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "k"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.keepEditor",
+                    "args": []
+                }
+            ]
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -241,6 +290,19 @@
                 }
             ]
         },
+        {
+            "before": [
+                "g",
+                "l"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine",
+                    "args": []
+                }
+            ]
+        },
     ],
     "vim.handleKeys": {
         "<C-a>": false,
@@ -254,10 +316,8 @@
     "window.zoomLevel": 1,
     "git.enableSmartCommit": true,
     "git.autofetch": true,
-    "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
-    "gitlens.hovers.enabled": false,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -268,10 +328,119 @@
         "suppressResultsExplorerNotice": false,
         "suppressShowKeyBindingsNotice": true
     },
-    "gitlens.keymap": "chorded",
+    "gitlens.keymap": "none",
     "gitlens.historyExplorer.enabled": true,
     "editor.parameterHints": false,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true,
     },
+    "vsicons.dontShowNewVersionMessage": true,
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "token": "TODO"
+        },
+        "dev": {
+            "companyId": "91c38e0d-3347-4f49-ae63-ea3729dd3f7f",
+            "host": "localhost:44387",
+        },
+        "stest": {
+            "companyId": "e1cb5d7c-5541-4b76-beef-57defeae6aa7",
+            "host": "waypoint-customer-stest-company-api.azurewebsites.net"
+        }
+    },
+    "rest-client.previewResponsePanelTakeFocus": false,
+    "gitlens.gitExplorer.location": "scm",
+    "gitlens.historyExplorer.location": "scm",
+    "gitlens.resultsExplorer.location": "scm",
+    "window.menuBarVisibility": "toggle",
+    "terminal.integrated.commandsToSkipShell": [
+        "editor.action.toggleTabFocusMode",
+        "workbench.action.debug.continue",
+        "workbench.action.debug.pause",
+        "workbench.action.debug.restart",
+        "workbench.action.debug.run",
+        "workbench.action.debug.start",
+        "workbench.action.debug.stepInto",
+        "workbench.action.debug.stepOut",
+        "workbench.action.debug.stepOver",
+        "workbench.action.debug.stop",
+        "workbench.action.firstEditorInGroup",
+        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusEighthEditorGroup",
+        "workbench.action.focusFifthEditorGroup",
+        "workbench.action.focusFirstEditorGroup",
+        "workbench.action.focusFourthEditorGroup",
+        "workbench.action.focusLastEditorGroup",
+        "workbench.action.focusSecondEditorGroup",
+        "workbench.action.focusSeventhEditorGroup",
+        "workbench.action.focusSixthEditorGroup",
+        "workbench.action.focusThirdEditorGroup",
+        "workbench.action.lastEditorInGroup",
+        "workbench.action.navigateDown",
+        "workbench.action.navigateLeft",
+        "workbench.action.navigateRight",
+        "workbench.action.navigateUp",
+        "workbench.action.openNextRecentlyUsedEditorInGroup",
+        "workbench.action.openPreviousRecentlyUsedEditorInGroup",
+        "workbench.action.quickOpenPreviousEditor",
+        "workbench.action.quickOpenView",
+        "workbench.action.showCommands",
+        "workbench.action.tasks.build",
+        "workbench.action.tasks.restartTask",
+        "workbench.action.tasks.runTask",
+        "workbench.action.tasks.showLog",
+        "workbench.action.tasks.showTasks",
+        "workbench.action.tasks.terminate",
+        "workbench.action.tasks.test",
+        "workbench.action.terminal.clear",
+        "workbench.action.terminal.clearSelection",
+        "workbench.action.terminal.copySelection",
+        "workbench.action.terminal.deleteWordLeft",
+        "workbench.action.terminal.deleteWordRight",
+        "workbench.action.terminal.focus",
+        "workbench.action.terminal.focusAtIndex1",
+        "workbench.action.terminal.focusAtIndex2",
+        "workbench.action.terminal.focusAtIndex3",
+        "workbench.action.terminal.focusAtIndex4",
+        "workbench.action.terminal.focusAtIndex5",
+        "workbench.action.terminal.focusAtIndex6",
+        "workbench.action.terminal.focusAtIndex7",
+        "workbench.action.terminal.focusAtIndex8",
+        "workbench.action.terminal.focusAtIndex9",
+        "workbench.action.terminal.focusFindWidget",
+        "workbench.action.terminal.focusNext",
+        "workbench.action.terminal.focusNextPane",
+        "workbench.action.terminal.focusPrevious",
+        "workbench.action.terminal.focusPreviousPane",
+        "workbench.action.terminal.hideFindWidget",
+        "workbench.action.terminal.kill",
+        "workbench.action.terminal.moveToLineEnd",
+        "workbench.action.terminal.moveToLineStart",
+        "workbench.action.terminal.new",
+        "workbench.action.terminal.newInActiveWorkspace",
+        "workbench.action.terminal.paste",
+        "workbench.action.terminal.resizePaneDown",
+        "workbench.action.terminal.resizePaneLeft",
+        "workbench.action.terminal.resizePaneRight",
+        "workbench.action.terminal.resizePaneUp",
+        "workbench.action.terminal.runActiveFile",
+        "workbench.action.terminal.runSelectedText",
+        "workbench.action.terminal.scrollDown",
+        "workbench.action.terminal.scrollDownPage",
+        "workbench.action.terminal.scrollToBottom",
+        "workbench.action.terminal.scrollToNextCommand",
+        "workbench.action.terminal.scrollToPreviousCommand",
+        "workbench.action.terminal.scrollToTop",
+        "workbench.action.terminal.scrollUp",
+        "workbench.action.terminal.scrollUpPage",
+        "workbench.action.terminal.selectAll",
+        "workbench.action.terminal.selectToNextCommand",
+        "workbench.action.terminal.selectToNextLine",
+        "workbench.action.terminal.selectToPreviousCommand",
+        "workbench.action.terminal.selectToPreviousLine",
+        "workbench.action.terminal.split",
+        "workbench.action.terminal.splitInActiveWorkspace",
+        "workbench.action.terminal.toggleTerminal",
+        "workbench.action.togglePanel"
+    ],
 }
