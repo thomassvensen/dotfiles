@@ -25,5 +25,16 @@
         "command": "workbench.action.toggleMaximizedPanel"
     },
     { "key": "ctrl+shift+k", "command": "workbench.action.terminal.focusNext" },
-    { "key": "ctrl+shift+j", "command": "workbench.action.terminal.focusPrevious" }
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "editor.emmet.action.balanceOut"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "editor.emmet.action.balanceIn"
+    }
 ]
