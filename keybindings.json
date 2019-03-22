@@ -1,40 +1,44 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    {
-        "key": "ctrl+s",
-        "command": "workbench.action.files.saveAll"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "workbench.action.quickOpen"
-    },
-    {
-        "key": "ctrl+oem_minus",
-        "command": "workbench.action.terminal.focus"
-    },
-    {
-        "key": "ctrl+alt+z",
-        "command": "workbench.action.toggleZenMode"
-    },
-    {
-        "key": "ctrl+k z",
-        "command": "-workbench.action.toggleZenMode"
-    },
-    {
-        "key": "ctrl+shift+oem_minus",
-        "command": "workbench.action.toggleMaximizedPanel"
-    },
-    { "key": "ctrl+shift+k", "command": "workbench.action.terminal.focusNext" },
-    {
-        "key": "ctrl+shift+j",
-        "command": "workbench.action.terminal.focusPrevious"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "editor.emmet.action.balanceOut"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "editor.emmet.action.balanceIn"
-    }
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+oem_minus",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+alt+z",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+k z",
+    "command": "-workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+shift+oem_minus",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  { "key": "ctrl+shift+k", "command": "workbench.action.terminal.focusNext" },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "editor.emmet.action.balanceOut"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "editor.emmet.action.balanceIn"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.tasks.runTask"
+  }
 ]
