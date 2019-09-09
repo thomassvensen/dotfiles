@@ -3,18 +3,22 @@
   "breadcrumbs.enabled": true,
   "breadcrumbs.symbolPath": "off",
   "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "[javascriptreact]": {
     "editor.formatOnSave": true
   },
   "[css]": {
     "editor.formatOnSave": true
   },
-  "[javascriptreact]": {
-    "editor.formatOnSave": true
-  },
   "terminal.integrated.fontSize": 12,
   "files.autoSave": "off",
   "editor.lineNumbers": "relative",
-  "editor.fontSize": 12,
+  "editor.fontSize": 10,
   "editor.minimap.enabled": false,
   "cSpell.language": "en,sv",
   "cSpell.enabledLanguageIds": [
@@ -61,7 +65,10 @@
     "Clickonce",
     "Customership",
     "Customerships",
+    "DEVOPS",
     "Definate",
+    "Deregistered",
+    "Documentum",
     "Dropdown",
     "FASTVIEW",
     "Fenix",
@@ -75,9 +82,11 @@
     "Kontonr",
     "Kontonummer",
     "Kundansvarig",
+    "Kunddetaljer",
     "Libphonenumber",
     "Luhn",
     "Lägenhetsnummer",
+    "MYGET",
     "Organisationsnummer",
     "Payor",
     "Polyfills",
@@ -85,6 +94,7 @@
     "Rebooked",
     "Restservice",
     "SDSWP",
+    "STARGATECOMMUNICATION",
     "Serilog",
     "Servicekoncept",
     "Serviceplan",
@@ -92,6 +102,7 @@
     "Suomi",
     "Teradata",
     "Unmount",
+    "Unregistering",
     "Validators",
     "Waypoint",
     "Webquote",
@@ -111,6 +122,8 @@
     "classname",
     "cobertura",
     "companyname",
+    "contactperson",
+    "countrycode",
     "createtdcustomer",
     "creditrating",
     "customernumber",
@@ -124,6 +137,8 @@
     "feedbackfunction",
     "flopflip",
     "focusable",
+    "frameborder",
+    "frontliner",
     "frontpage",
     "functionapp",
     "functionkey",
@@ -131,6 +146,7 @@
     "gatuaddress",
     "globalcomponents",
     "hardcode",
+    "ifcaws",
     "ifint",
     "insuranceportal",
     "invoicinglegacy",
@@ -138,6 +154,7 @@
     "invoicingportal",
     "jsnext",
     "junit",
+    "kcbrford",
     "kontonummeret",
     "kundnummer",
     "kunduppgifter",
@@ -152,6 +169,7 @@
     "ndash",
     "noopener",
     "noreferrer",
+    "nowrap",
     "oidc",
     "onclickoutside",
     "onlinesales",
@@ -159,9 +177,11 @@
     "orgnumbersearch",
     "paymentchannel",
     "paymentchannels",
+    "phonenumber",
     "poedit",
     "polyfill",
     "postaddress",
+    "predeploy",
     "puzzel",
     "reselect",
     "resourcegroup",
@@ -173,6 +193,7 @@
     "stargate",
     "stest",
     "styleguide",
+    "styleguidist",
     "sökresultat",
     "thenby",
     "topmenu",
@@ -185,6 +206,7 @@
     "waypointportal",
     "waypointportaltool",
     "webcomponents",
+    "webcomponentsjs",
     "woff",
     "wpfakecp",
     "wslpath",
@@ -193,7 +215,6 @@
     "Ändringslogg"
   ],
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-  "workbench.iconTheme": "vscode-icons",
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
@@ -322,6 +343,26 @@
       ]
     },
     {
+      "before": ["g", "o"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeOtherEditors",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["g", "n"],
+      "after": [],
+      "commands": [
+        {
+          "command": "search.action.focusNextSearchResult",
+          "args": []
+        }
+      ]
+    },
+    {
       "before": ["g", "k"],
       "after": [],
       "commands": [
@@ -394,10 +435,6 @@
   },
   "gitlens.keymap": "none",
   "gitlens.historyExplorer.enabled": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "vsicons.dontShowNewVersionMessage": true,
   "rest-client.environmentVariables": {
     "$shared": {
       "token": "TODO"
@@ -523,5 +560,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
-  "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${activeFolderMedium}"
+  "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${activeFolderMedium}",
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  "extensions.ignoreRecommendations": false
 }
