@@ -263,6 +263,16 @@
       ]
     },
     {
+      "before": ["g", "x"],
+      "after": [],
+      "commands": [
+        {
+          "command": "goToNextReference",
+          "args": []
+        }
+      ]
+    },
+    {
       "before": ["g", "b"],
       "after": [],
       "commands": [
@@ -308,16 +318,6 @@
       "commands": [
         {
           "command": "workbench.action.editor.previousChange",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["g", "R"],
-      "after": [],
-      "commands": [
-        {
-          "command": "git.revertSelectedRanges",
           "args": []
         }
       ]
