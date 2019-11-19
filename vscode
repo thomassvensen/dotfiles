@@ -562,5 +562,7 @@
   "editor.formatOnType": false,
   "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${activeFolderMedium}",
   "workbench.colorTheme": "Tomorrow Night Blue",
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "terminal.integrated.automationShell.osx": "/bin/bash",
+  "terminal.integrated.shell.osx": "/bin/bash",
 }
