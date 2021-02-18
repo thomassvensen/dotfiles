@@ -2,7 +2,7 @@
 	name = Thomas Svensen
 	email = thomas.svensen@bekk.no
 [core]
-	editor = \"C:/Program Files (x86)/Vim/vim74/gvim.exe\"
+	editor = "gvim"
 	autocrlf = true
 	excludesfile = /Users/thomas svensen/.gitignore_global
 [alias]
@@ -16,12 +16,12 @@
 	pso = push --set-upstream origin
 	ll = log --oneline --decorate
         l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short
+        lm = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short --max-count-10
         cam = commit -am
         su = submodule update
         s = status
 [diff]
 	guitool = gvim
-[credential]
 [color "status"]
 	untracked = bold yellow
 	changed = bold yellow
@@ -29,13 +29,9 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[credential]
-	helper = osxkeychain
 [push]
 	default = simple
+[rebase]
+	autoStash = true
+[pull]
+	rebase = true
