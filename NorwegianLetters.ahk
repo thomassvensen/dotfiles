@@ -10,4 +10,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 !^o::ø
 +!^o::Ø
 !^;::æ
+!^j::
+    send {Down}
+return
+!^k::
+    send {Up}
+return
+!^h::
+    send {Left}
+return
+!^l::
+    send {Right}
+return
 ^Space:: WinSet, AlwaysOnTop, ,A
