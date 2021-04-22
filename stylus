@@ -1,0 +1,7 @@
+/* Splunk */
+._time-drilldown {
+    display: block;
+    max-height: 2rem;
+    overflow: scroll;
+    font-size: 10px;
+}
