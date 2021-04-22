@@ -2,6 +2,6 @@
 ._time-drilldown {
     display: block;
     max-height: 2rem;
-    overflow: scroll;
+    overflow: hidden;
     font-size: 10px;
 }
