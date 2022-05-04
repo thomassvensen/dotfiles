@@ -2,9 +2,7 @@
 	name = Thomas Svensen
 	email = thomas.svensen@bekk.no
 [core]
-	editor = "gvim"
 	autocrlf = true
-	excludesfile = /Users/thomas svensen/.gitignore_global
 [alias]
 	a = add --all
 	b = branch
@@ -16,12 +14,10 @@
 	pso = push --set-upstream origin
 	ll = log --oneline --decorate
         l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short
-        lm = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short --max-count-10
+        lm = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short --max-count=5
         cam = commit -am
         su = submodule update
         s = status
-[diff]
-	guitool = gvim
 [color "status"]
 	untracked = bold yellow
 	changed = bold yellow
