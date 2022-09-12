@@ -8,6 +8,11 @@ Plug 'easymotion/vim-easymotion'
 map <leader>F <Plug>(easymotion-s)
 map <leader>f <Plug>(easymotion-f)
 
+set which-key
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_FontSize = 20
+let g:WhichKey_DefaultDelay = 1000
+
 map gb <Action>(ActivateCommitToolWindow)
 map gf <Action>(HideAllWindows)
 map ge <Action>(GotoNextError)
