@@ -1,0 +1,41 @@
+Plug 'tpope/vim-surround'
+
+" Plug 'preservim/nerdtree`
+" map <c-t>   :NERDTree<CR>
+
+let mapleader = ","
+Plug 'easymotion/vim-easymotion'
+map <leader>F <Plug>(easymotion-s)
+map <leader>f <Plug>(easymotion-f)
+
+map gb <Action>(ActivateCommitToolWindow)
+map gf <Action>(HideAllWindows)
+map ge <Action>(GotoNextError)
+map gl <Action>(CommentByLineComment)
+map [ <Action>(PreviousTab)
+map ] <Action>(NextTab)
+map gc <Action>(VcsShowNextChangeMarker)
+map gC <Action>(VcsShowPrevChangeMarker)
+map R <Action>(Vcs.RollbackChangedLines)
+map g} <Action>(MoveTabRight)
+map g{ <Action>(MoveEditorToOppositeTabGroup)
+map g[ <Action>(PrevSplitter)
+map g] <Action>(NextSplitter)
+map gi <Action>(GotoImplementation)
+map gd <Action>(GotoDeclaration)
+map # <Action>(CloseEditor)
+map go <Action>(CloseAllEditorsButActive)
+map ga <Action>(FindUsages)
+map gs <Action>(LocateInSolutionView)
+
+map <c-o> <Action>(Back)
+map <c-i> <Action>(Forward)
+
+" No need to "reselect" old visual area after indenting
+:vnoremap < <gv
+:vnoremap > >gv
+
+set ignorecase
+set incsearch
+set ideajoin
+set scrolloff=5
