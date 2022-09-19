@@ -23,3 +23,14 @@ alias gacm="git add . && git commit -m"
 gco() {
     git co `git b | grep $1`
 }
+
+grco() {
+    fetch
+    git co `git b -r | sed 's/origin\///g' | grep $1`
+}
+
+gacp() {
+    git add . && git commit -m "$1" && push && fetch
+}
+
+eval "$(starship init bash)"
