@@ -32,7 +32,7 @@ map # <Action>(CloseEditor)
 map go <Action>(CloseAllEditorsButActive)
 map ga <Action>(FindUsages)
 map gs <Action>(LocateInSolutionView)
-map gr <Action>(mainRunToolbarRunProcess)
+map gr <Action>(ChooseRunConfiguration)
 
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
