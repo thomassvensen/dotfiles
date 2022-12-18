@@ -1,12 +1,20 @@
 Plug 'tpope/vim-surround'
+Plug 'tommcdo/vim-exchange'
+Plug 'vim-scripts/ReplaceWithRegister'
+
+" let g:multi_cursor_use_default_mapping=0
+" Default mapping
+" let g:multi_cursor_start_word_key      = '<C-S-n>'
+" let g:multi_cursor_select_all_word_key = '<A-n>'
+
 
 " Plug 'preservim/nerdtree`
 " map <c-t>   :NERDTree<CR>
 
-set which-key
-let g:WhichKey_ShowVimActions = "true"
-let g:WhichKey_FontSize = 20
-let g:WhichKey_DefaultDelay = 1000
+" set which-key
+" let g:WhichKey_ShowVimActions = "true"
+" let g:WhichKey_FontSize = 20
+" let g:WhichKey_DefaultDelay = 1000
 
 let mapleader = ","
 Plug 'easymotion/vim-easymotion'
@@ -32,7 +40,7 @@ map # <Action>(CloseEditor)
 map go <Action>(CloseAllEditorsButActive)
 map ga <Action>(FindUsages)
 map gs <Action>(LocateInSolutionView)
-map gr <Action>(ChooseRunConfiguration)
+map <leader>r <Action>(ChooseRunConfiguration)
 
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
