@@ -2,6 +2,9 @@ map # removeTab
 map e removeTab
 map <c-o> goBack
 map <c-i> goForward
-map ( previousTab
-map ) nextTab
+map [ previousTab
+map ] nextTab
 map u restoreTab
+map gn moveTabToNewWindow
+map s LinkHints.activate action="focus"
+map gf closeDownloadBar
