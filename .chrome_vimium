@@ -1,5 +1,5 @@
 map # removeTab
-map e removeTab
+map q removeTab
 map <c-o> goBack
 map <c-i> goForward
 map [ previousTab
