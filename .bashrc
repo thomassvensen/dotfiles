@@ -18,7 +18,11 @@ alias gcm="git commit -m"
 alias gm="git co master && git pull"
 alias ga="git add ."
 alias gacm="git add . && git commit -m"
-# alias gacp="git add . && git commit -m && git push" -- no good, needs to pass message to commit
+alias oeh="cd ~/dev/octopuseventhandler"
+alias isc="cd ~/dev/ice-service-catalog"
+alias iscf="cd ~/dev/ice-service-catalog/source/service-catalog.web/"
+alias mon="cd ~/dev/monitoring"
+
 
 gco() {
     git co `git b | grep $1`
