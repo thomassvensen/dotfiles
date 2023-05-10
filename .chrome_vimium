@@ -5,6 +5,7 @@ map <c-i> goForward
 map [ previousTab
 map ] nextTab
 map u restoreTab
-map gn moveTabToNewWindow
+map g} moveTabToNewWindow
+map gf nextFrame
 map s LinkHints.activate action="focus"
-map gf closeDownloadBar
+map <c-e> passNextKey
