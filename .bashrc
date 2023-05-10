@@ -22,7 +22,9 @@ alias oeh="cd ~/dev/octopuseventhandler"
 alias isc="cd ~/dev/ice-service-catalog"
 alias iscf="cd ~/dev/ice-service-catalog/source/service-catalog.web/"
 alias mon="cd ~/dev/monitoring"
-
+alias ost="cd ~/dev/octopus-step-templates"
+alias azu="cd ~/dev/azurecontainerservice"
+alias jul="cd ~/dev/Julian.Web"
 
 gco() {
     git co `git b | grep $1`
@@ -34,6 +36,11 @@ grco() {
 }
 
 gacp() {
+    dotnet format
+    git add . && git commit -m "$1" && push && fetch
+}
+
+gacpf() {
     git add . && git commit -m "$1" && push && fetch
 }
 
