@@ -2,17 +2,11 @@ Plug 'tpope/vim-surround'
 Plug 'tommcdo/vim-exchange'
 Plug 'vim-scripts/ReplaceWithRegister'
 
-" let g:multi_cursor_use_default_mapping=0
-" Default mapping
-" let g:multi_cursor_start_word_key      = '<C-S-n>'
-" let g:multi_cursor_select_all_word_key = '<A-n>'
-
-
 " Plug 'preservim/nerdtree`
 " map <c-t>   :NERDTree<CR>
 
 " set which-key
-" let g:WhichKey_ShowVimActions = "true"
+" let g:WhichKey_ShowVimActions = "false"
 " let g:WhichKey_FontSize = 20
 " let g:WhichKey_DefaultDelay = 1000
 
@@ -40,7 +34,18 @@ map # <Action>(CloseEditor)
 map go <Action>(CloseAllEditorsButActive)
 map ga <Action>(FindUsages)
 map gs <Action>(LocateInSolutionView)
+map gM <Action>(MethodDown)
+map gm <Action>(EditorMatchBrace)
 map <leader>r <Action>(ChooseRunConfiguration)
+map <leader>s <Action>(Stop)
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gr <Action>(Resume)
+map <leader>gn <Action>(StepOver)
+map <leader>gi <Action>(StepInto)
+map <leader>go <Action>(StepOut)
+
+map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
 
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
@@ -53,3 +58,5 @@ set ignorecase
 set incsearch
 set ideajoin
 set scrolloff=5
+set NERDTree
+set highlightedyank
