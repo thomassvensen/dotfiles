@@ -1,62 +1,70 @@
-Plug 'tpope/vim-surround'
-Plug 'tommcdo/vim-exchange'
-Plug 'vim-scripts/ReplaceWithRegister'
+alias l='ls -G'
+alias la='ls -a -G'
+alias ll='ls -l -G'
+alias lh='ls -lha -G'
+alias ..='cd ..'
+alias ...='cd ../..'
 
-" Plug 'preservim/nerdtree`
-" map <c-t>   :NERDTree<CR>
+# export PS1="\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ "
+export PS1="\[\033[33m\]\w\[\033[36m\] \[\033[0m\]$ "
+alias s="git status"
+alias add="git add"
+alias co="git checkout"
+alias d="git diff"
+alias l="git l"
+alias la="git la"
+alias lo="git lo"
+alias push="git push"
+alias pull="git pull"
+alias fetch="git fetch"
+alias commit="git commit"
+alias gb="git branch"
+alias gacm="git add . && git commit -m"
+alias oeh="cd ~/dev-lyse/ice-octopus-event-handler"
+alias dyn="cd ~/dev-lyse/ice-dynatrace-event-handler"
+alias isc="cd ~/dev-lyse/ice-service-catalog"
+alias iscf="cd ~/dev-lyse/ice-service-catalog/frontend/service-catalog.web/"
+alias mon="cd ~/dev-lyse/ice-monitoring"
+alias ost="cd ~/dev/octopus-step-templates"
+alias azu="cd ~/dev/azurecontainerservice"
+alias jul="cd ~/dev/Julian.Web"
+alias myn="cd ~/my-notes"
 
-" set which-key
-" let g:WhichKey_ShowVimActions = "false"
-" let g:WhichKey_FontSize = 20
-" let g:WhichKey_DefaultDelay = 1000
+# C:\Program Files\JetBrains\JetBrains Rider 2022.2.1\bin\rider64.exe
+alias r="/c/Program\ Files/JetBrains/JetBrains\ Rider\ 231.6471.8/bin/rider64.exe"
 
-let mapleader = ","
-Plug 'easymotion/vim-easymotion'
-map <leader>F <Plug>(easymotion-s)
-map <leader>f <Plug>(easymotion-f)
+gm() {
+    git co `git branch | grep -E "\bma"`&& git pull
+}
 
-map gb <Action>(ActivateCommitToolWindow)
-map gf <Action>(HideAllWindows)
-map ge <Action>(GotoNextError)
-map gl <Action>(CommentByLineComment)
-map [ <Action>(PreviousTab)
-map ] <Action>(NextTab)
-map gc <Action>(VcsShowNextChangeMarker)
-map gC <Action>(VcsShowPrevChangeMarker)
-map R <Action>(Vcs.RollbackChangedLines)
-map g} <Action>(MoveTabRight)
-map g{ <Action>(MoveEditorToOppositeTabGroup)
-map g[ <Action>(PrevSplitter)
-map g] <Action>(NextSplitter)
-map gi <Action>(GotoImplementation)
-map gd <Action>(GotoDeclaration)
-map # <Action>(CloseEditor)
-map go <Action>(CloseAllEditorsButActive)
-map ga <Action>(FindUsages)
-map gs <Action>(LocateInSolutionView)
-map gM <Action>(MethodDown)
-map gm <Action>(EditorMatchBrace)
-map <leader>r <Action>(ChooseRunConfiguration)
-map <leader>s <Action>(Stop)
-map <leader>gR <Action>(Run)
-map <leader>gr <Action>(Resume)
-map <leader>gn <Action>(StepOver)
-map <leader>gi <Action>(StepInto)
-map <leader>go <Action>(StepOut)
 
-map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
-map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+gco() {
+    git co `git b | grep $1`
+}
 
-map <c-o> <Action>(Back)
-map <c-i> <Action>(Forward)
+grco() {
+    fetch
+    git co `git b -r | sed 's/origin\///g' | grep $1`
+}
 
-" No need to "reselect" old visual area after indenting
-:vnoremap < <gv
-:vnoremap > >gv
+gacp() {
+    dotnet format
+    git add . && git commit -m "$1" && push && fetch
+}
 
-set ignorecase
-set incsearch
-set ideajoin
-set scrolloff=5
-set NERDTree
-set highlightedyank
+gap() {
+    git add . && git commit -m "$1" && push && fetch
+}
+
+sship()  {
+ eval "$(starship init bash)"
+}
+
+logtail() {
+    tail -f $1 | grep -Eo "message[^,]*"
+}
+
+alias bwi="bw get password teamcity | clip"
+alias bwa="bw get password srvadm | clip"
+
+sship
