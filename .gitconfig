@@ -1,23 +1,22 @@
 [user]
 	name = Thomas Svensen
-	email = thomas.svensen@bekk.no
+	email = thomas.svensen@ice.no
 [core]
 	autocrlf = true
+	preloadindex = true
+	fscache = true
 [alias]
-	a = add --all
 	b = branch
 	co = checkout
-	cob = checkout -b
-	cot = checkout --track
 	d = diff
 	p = pull
 	pso = push --set-upstream origin
-	ll = log --oneline --decorate
-        l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short
-        lm = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short --max-count=5
-        cam = commit -am
-        su = submodule update
-        s = status
+	l = log --oneline --decorate --max-count=10
+	la = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short
+	lo = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short --max-count=10
+	s = status
+[diff]
+	guitool = rider64.exe
 [color "status"]
 	untracked = bold yellow
 	changed = bold yellow
@@ -26,8 +25,12 @@
 	smudge = git-lfs smudge %f
 	required = true
 [push]
-	default = simple
+	default = current
 [rebase]
 	autoStash = true
 [pull]
 	rebase = true
+[gc]
+	auto = 256
+[credential "http://bitbucket"]
+	provider = bitbucket
