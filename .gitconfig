@@ -1,22 +1,27 @@
 [user]
 	name = Thomas Svensen
-	email = thomas.svensen@ice.no
+	email = thomas.svensen@lyse.no
 [core]
 	autocrlf = true
-	preloadindex = true
-	fscache = true
 [alias]
+	a = add --all
 	b = branch
 	co = checkout
+	cob = checkout -b
+	cot = checkout --track
 	d = diff
+	dw = diff --ignore-all-space
+	dt = difftool
+	f = fetch
 	p = pull
 	pso = push --set-upstream origin
-	l = log --oneline --decorate --max-count=10
-	la = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short
-	lo = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short --max-count=10
-	s = status
-[diff]
-	guitool = rider64.exe
+	lll = log --oneline --decorate
+	l = log --pretty=format:'%C(yellow)%h %Creset%s' --date=short --max-count=5
+        la = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an %Creset%s %Cred%d' --date=short
+        ll = log --pretty=format:'%C(yellow)%h %Cred%ad %Cgreen%an%Cgreen%d %Creset%s' --date=short
+        cam = commit -am
+        su = submodule update
+        s = status
 [color "status"]
 	untracked = bold yellow
 	changed = bold yellow
@@ -30,7 +35,13 @@
 	autoStash = true
 [pull]
 	rebase = true
-[gc]
-	auto = 256
+[diff]
+    tool = difftastic
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
 [credential "http://bitbucket"]
 	provider = bitbucket
