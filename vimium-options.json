@@ -1,6 +1,7 @@
 {
-  "keyMappings": "# By default: <a-p> toggle pinning of tab\nmap # removeTab\nmap q removeTab\nmap <c-o> goBack\nmap <c-i> goForward\nmap [ previousTab\nmap ] nextTab\nmap u restoreTab\nmap g} moveTabToNewWindow\nmap gf nextFrame\nmap s LinkHints.activate action=\"focus\"\nmap <c-e> passNextKey\nmap <c-y> switchFocus",
-  "settingsVersion": "2.1.2",
+  "keyMappings": "# By default: <a-p> toggle pinning of tab\nmap # removeTab\nmap q removeTab\nmap <c-o> goBack\nmap <c-i> goForward\nmap [ previousTab\nmap ] nextTab\nmap u restoreTab\nmap g} moveTabToNewWindow\nmap gf nextFrame\nmap <c-e> passNextKey",
+  "newTabUrl": "https://service-catalog.ice.no",
+  "settingsVersion": "2.2.1",
   "exclusionRules": [
     {
       "passKeys": "# / ? a b c j k o r",
@@ -8,19 +9,19 @@
     },
     {
       "passKeys": "l r t",
-      "pattern": "https://app.slack.com/"
-    },
-    {
-      "passKeys": "? n p",
-      "pattern": "https://github.com/"
+      "pattern": "https://app.slack.com/*"
     },
     {
       "passKeys": "# . ? b j k r y",
-      "pattern": "https://app.fastmail.com/"
+      "pattern": "https://app.fastmail.com/*"
     },
     {
-      "passKeys": "/ ? q",
-      "pattern": ":https://kagi.com/"
+      "passKeys": "/ ?",
+      "pattern": "https://kagi.com/*"
+    },
+    {
+      "passKeys": "?",
+      "pattern": "https://github.com/*"
     }
   ]
 }
